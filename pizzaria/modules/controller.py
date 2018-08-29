@@ -2,6 +2,13 @@
 
 from modules.model import dbadmin as control
 
+azul = "\033[36m"
+rosa = "\033[35m"
+vermelho = "\033[31m"
+verde = "\033[32m"
+amarelo = "\033[33m"
+normal = "\033[0m"
+
 class pizzaria():
 	def __init__(self):
 		print("Só testando")
@@ -13,4 +20,4 @@ class pizzaria():
 		elif opcao == 3:
 			control.view("sabores")
 		else:
-			print("[!] Opção invalida")
+			print('[{}ops{}] Opção invalida!'.format(vermelho, normal))
