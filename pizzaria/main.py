@@ -62,7 +62,6 @@ while True:
             1) Clientes
             2) Pedidos
             3) Sabores
-
         ''')
 
         opcao = int(input('[ {}Opção{} ]: '.format(amarelo, normal)))
