@@ -17,7 +17,7 @@ class dbadmin():
 		print('[{}PyPyzza{}] Conectado com o banco de dados!'.format(vermelho, normal))
 	def view(opcao):
 		if opcao == 'clientes':
-			con.execute('SELECT * FROM clientes;')
+			con.execute('SELECT * FROM clientes')
 			for resultados in con.fetchall():
 				print(resultados)
 		elif opcao == 'sabores':
@@ -31,11 +31,14 @@ class dbadmin():
 		else: 
 			print('[{}ops{}] Algo deu errado!'.format(vermelho, normal))
 
-	def cadastro(nome, tel, end):
+	def cadastroClientes(nome, tel, end):
 		self.nome = nome_cliente
 		self.tel = telefone
 		self.end = endereco
 
 		con.execute("INSERT INTO clientes (nome, telefone, endereco) VALUES ('{}', '{}', '{}')")
 		cdb.commit()
-cdb.close()
+	def cadastroPedidos():
+		pass
+	def cadastroSabores():
+		pass

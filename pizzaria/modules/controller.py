@@ -15,18 +15,30 @@ class pizzaria():
 	def ver(opcao):
 		if opcao == 1:
 			try:
-				control.view("clientes")
+				if  control.view('pedidos'):
+					print('[ {}Pypizza{} ]: Fim da consulta!'.format(verde, normal))
+				else:
+					print('[ {}Pypizza{} ]: Fim da consulta!'.format(verde, normal))
 			except:
-				print('[{}ops{}] Não temos clientes cadastrados!'.format(vermelho, normal))
+				print('[ {}Pypizza{} ]: Não temos clientes cadastrados!'.format(vermelho, normal))
 		elif opcao == 2:
 			try:
-				control.view("pedidos")
+				if  control.view('pedidos'):
+					print('[ {}Pypizza{} ]: Fim da consulta!'.format(verde, normal))
+				else:
+					print('[ {}Pypizza{} ]: Fim da consulta!'.format(verde, normal))
 			except:
-				print('[{}ops{}] Não temos pedidos!'.format(vermelho, normal))
+				print('[ {}Pypizza{} ]: Não temos pedidos!'.format(vermelho, normal))
 		elif opcao == 3:
-			control.view("sabores")
+			try:
+				if  control.view('sabores'):
+					print('[ {}Pypizza{} ]: Fim da consulta!'.format(verde, normal))
+				else:
+					print('[ {}Pypizza{} ]: Fim da consulta!'.format(verde, normal))
+			except:
+				print('[ {}Pypizza{} ]: Não temos sabores disponiveis!'.format(vermelho, normal))
 		else:
-			print('[{}ops{}] Opção invalida!'.format(vermelho, normal))
+			print('[ {}Pypizza{} ]: Opção invalida!'.format(vermelho, normal))
 
 	def cadastro(opcao):
 		pass

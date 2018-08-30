@@ -64,26 +64,28 @@ while True:
             3) Sabores
         ''')
 
-        opcao = int(input('[ {}Opção{} ]: '.format(amarelo, normal)))
+        opcao = str(input('[ {}Opção{} ]: '.format(amarelo, normal)))
 
-        if opcao == 1:
-            commands.ver(1)
-            pass
-        if opcao == 2:
-            commands.ver(2)
-            pass
-        if opcao == 3:
-            commands.ver(3)
-            pass
+        if opcao not in '123':
+            print('[ {}Pypizza{} ]: Opção invaliada, tente novamente!'.format(vermelho, normal))
         else:
-            print('[{}ops{}] Opção invalida!'.format(vermelho, normal))
+            if opcao == '1':
+                commands.ver(1)
+                pass
+            elif opcao == '2':
+                commands.ver(2)
+                pass
+            elif opcao == '3':
+                commands.ver(3)
+                pass
+            
     elif esc == 4:
         fimbanner()
         break
     else: 
-        print('[{}ops{}] Opção invaliada!'.format(vermelho, normal))
+        print('[ {}Pypizza{} ]: Opção invaliada, tente novamente!'.format(vermelho, normal))
     
-    cont = input('[ {}Pypizza{} ]: Quer continuar usando? [S/N]: '.format(amarelo, normal)).upper().strip()[0]
+    cont = input('[ {}Pypizza{} ]: Deseja continuar? [S/N]: '.format(amarelo, normal)).upper().strip()[0]
 
     if cont == 'S':
         os.system('clear')
