@@ -30,8 +30,12 @@ class dbadmin():
 				print(resultados)
 		else: 
 			print('[{}ops{}] Algo deu errado!'.format(vermelho, normal))
-		
-	def cadastro():
-		pass
 
+	def cadastro(nome, tel, end):
+		self.nome = nome_cliente
+		self.tel = telefone
+		self.end = endereco
+
+		con.execute("INSERT INTO clientes (nome, telefone, endereco) VALUES ('{}', '{}', '{}')")
+		cdb.commit()
 cdb.close()

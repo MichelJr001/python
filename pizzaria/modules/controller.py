@@ -14,10 +14,19 @@ class pizzaria():
 		print("Só testando")
 	def ver(opcao):
 		if opcao == 1:
-			control.view("clientes")
+			try:
+				control.view("clientes")
+			except:
+				print('[{}ops{}] Não temos clientes cadastrados!'.format(vermelho, normal))
 		elif opcao == 2:
-			control.view("pedidos")
+			try:
+				control.view("pedidos")
+			except:
+				print('[{}ops{}] Não temos pedidos!'.format(vermelho, normal))
 		elif opcao == 3:
 			control.view("sabores")
 		else:
 			print('[{}ops{}] Opção invalida!'.format(vermelho, normal))
+
+	def cadastro(opcao):
+		pass

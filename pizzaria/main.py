@@ -22,7 +22,7 @@ def fimbanner():
         ██║        ██║   ██║     ██║███████╗███████╗██║  ██║
         ╚═╝        ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
         -------------------[ {}Michel Anderson{} ]--------------{}
-        
+
         # Github: https://github.com/MichelJr001
         # Twitter: https://twitter.com/_Michel_Jr_
 
