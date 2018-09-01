@@ -40,5 +40,8 @@ class pizzaria():
 		else:
 			print('[ {}Pypizza{} ]: Opção invalida!'.format(vermelho, normal))
 
-	def cadastro(opcao):
-		pass
+	def cadastroClientes(nome, tel, end):
+		try:
+			control.cadastroClientes(nome, tel, end)
+		except:
+			print('[ {}Pypizza{} ]: Erro ao cadastrar clientes!'.format(vermelho, normal))

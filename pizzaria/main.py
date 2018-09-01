@@ -12,7 +12,7 @@ verde = "\033[32m"
 amarelo = "\033[33m"
 normal = "\033[0m"
 
-def fimbanner():
+def banner():
     os.system("clear")
     print('''
         {}██████╗ ██╗   ██╗██████╗ ██╗███████╗███████╗ █████╗{} v0.1{}
@@ -22,47 +22,38 @@ def fimbanner():
         ██║        ██║   ██║     ██║███████╗███████╗██║  ██║
         ╚═╝        ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
         -------------------[ {}Michel Anderson{} ]--------------{}
-
-        # Github: https://github.com/MichelJr001
-        # Twitter: https://twitter.com/_Michel_Jr_
-
-        Obrigado por usar!{}
-    '''.format(azul, amarelo, normal, azul, normal, azul, amarelo, azul, azul, normal))
+    '''.format(azul, amarelo, normal, azul, normal, azul, amarelo, azul, normal))
 
 os.system("clear")
-
 while True:
+    banner()
     print('''
-        {}██████╗ ██╗   ██╗██████╗ ██╗███████╗███████╗ █████╗{} v0.1{}
-        {}██╔══██╗╚██╗ ██╔╝██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗{}
-        ██████╔╝ ╚████╔╝ ██████╔╝██║  ███╔╝   ███╔╝ ███████║
-        ██╔═══╝   ╚██╔╝  ██╔═══╝ ██║ ███╔╝   ███╔╝  ██╔══██║{}
-        ██║        ██║   ██║     ██║███████╗███████╗██║  ██║
-        ╚═╝        ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
-        -------------------[ {}Michel Anderson{} ]--------------{}
-
         {}[ 1 ]{} -> Novo Cliente
         {}[ 2 ]{} -> Novo Pedido
         {}[ 3 ]{} -> Visualizar
         {}[ 4 ]{} -> Sair
 
-    '''.format(azul, amarelo, normal, azul, normal, azul, amarelo, azul, normal, azul, normal, azul, normal, azul, normal, azul, normal))
+    '''.format(azul, normal, azul, normal, azul, normal, azul, normal))
     esc = int(input('[ {}Opção{} ]: '.format(amarelo, normal)))
 
     if esc == 1:
-        pass
+        os.system('clear')
+        banner()
+        nome = str(input('[Nome do cliente]: '))
+        tel = str(input('[Telefone do cliente]: '))
+        end = str(input('[Endereço do cliente]: '))
+
+        commands.cadastroClientes(nome, tel, end)
     elif esc == 2:
         pass
     elif esc == 3:
-        os.system("clear")
+        os.system('clear')
+        banner()
         print('''
-            Vizualizar
-            ----------
-
-            1) Clientes
-            2) Pedidos
-            3) Sabores
-        ''')
+            {}[ 1 ]{} -> Clientes
+            {}[ 2 ]{} -> Pedidos
+            {}[ 3 ]{} -> Sabores
+        '''.format(azul, normal, azul, normal, azul, normal))
 
         opcao = str(input('[ {}Opção{} ]: '.format(amarelo, normal)))
 
@@ -80,7 +71,8 @@ while True:
                 pass
             
     elif esc == 4:
-        fimbanner()
+        banner()
+        print('{}\t# Github: https://github.com/MichelJr001\n\t# Twitter: https://twitter.com/_Michel_Jr_\n\n\tObrigado por usar!\n{}'.format(azul, normal))
         break
     else: 
         print('[ {}Pypizza{} ]: Opção invaliada, tente novamente!'.format(vermelho, normal))
@@ -91,10 +83,12 @@ while True:
         os.system('clear')
         pass
     elif cont == 'N':
-        fimbanner()
+        banner()
+        print('{}\t# Github: https://github.com/MichelJr001\n\t# Twitter: https://twitter.com/_Michel_Jr_\n\n\tObrigado por usar!\n{}'.format(azul, normal))
         break
     else:
-        fimbanner()
+        banner()
+        print('{}\t# Github: https://github.com/MichelJr001\n\t# Twitter: https://twitter.com/_Michel_Jr_\n\n\tObrigado por usar!\n{}'.format(azul, normal))
         break
 
     
