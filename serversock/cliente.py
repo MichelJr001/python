@@ -8,7 +8,7 @@ os.system('clear')
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 target = ''
-port = 8080
+port = 443
 
 try:
     s.connect((target, port))

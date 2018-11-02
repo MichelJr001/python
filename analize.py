@@ -7,6 +7,7 @@
 # Criador de arquivos json 1.0
 
 import json
+import os
 
 class cadastro():
     def __init__(self, nome, snome, idade, nascionalidade):
@@ -25,7 +26,7 @@ class cadastro():
 
         dados = open("dados.txt", "a")
         dados.write("\n--------------------------------------------------------------------------------")
-        dados.write("\nNome: {}\nSobrenome: {}\nIdade: {}\nNascionalidade: {}".format(json_filtrado["Nome"], json_filtrado["Sobrenome"], json_filtrado["Idade"], json_filtrado["Nascionalidade"]))
+        dados.write("\nNome: {}\nSobrenome: {}\nIdade: {}\nNascionalidade: {}\n".format(json_filtrado["Nome"], json_filtrado["Sobrenome"], json_filtrado["Idade"], json_filtrado["Nascionalidade"]))
         dados.close()
 
         dados_json = open("dados.json", "a")
@@ -33,11 +34,19 @@ class cadastro():
         dados_json.write("\n")
         dados_json.close()
 
+os.system('clear')
 print("""
 \033[32m
-Cadastro de Clientes
--------- -- --------
+   ###    ##    ##    ###    ##       ##    ## ######## ########               ##  ######   #######  ##    ## v1.0 
+  ## ##   ###   ##   ## ##   ##        ##  ##       ##  ##                     ## ##    ## ##     ## ###   ##    
+ ##   ##  ####  ##  ##   ##  ##         ####       ##   ##                     ## ##       ##     ## ####  ##    
+##     ## ## ## ## ##     ## ##          ##       ##    ######                 ##  ######  ##     ## ## ## ##    
+######### ##  #### ######### ##          ##      ##     ##               ##    ##       ## ##     ## ##  ####    
+##     ## ##   ### ##     ## ##          ##     ##      ##               ##    ## ##    ## ##     ## ##   ###    
+##     ## ##    ## ##     ## ########    ##    ######## ######## #######  ######   ######   #######  ##    ##
 \033[0m
+ @author: Michel Anderson
+ @github: MichelJr001
 """)
 
 while True:
@@ -62,7 +71,7 @@ while True:
                 print("[\033[31m ERRO \033[0m]: Escolha invalida!")
         else:
                 if esc == "S":
-                        pass
+                        os.system(clear)
                 else:
                         break
 
