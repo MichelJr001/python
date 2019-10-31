@@ -1,0 +1,19 @@
+{
+	"expressao": [
+		"Tabela de Veículos para o Leilão \\d+",
+		"LOTE",
+		"PÁTIO.*",
+		"CONDIÇÃO",
+		"CHASSI",
+		"PLACA",
+		"MARCA",
+		"MOTOR",
+		"COR",
+		"ANO",
+		"AVALIAÇÃO",
+		"\\n",
+		"R\\$ \\d+,\\d+ \\|\\n",
+		"R\\$ \\d+\\.\\d+,\\d+ \\|\\n",
+		"^\\s"
+	]
+}
