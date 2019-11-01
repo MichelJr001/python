@@ -1,0 +1,17 @@
+CREATE TABLE clientes(
+	id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
+	nome VARCHAR[100],
+	telefone VARCHAR[13],
+	endereco VARCHAR[200],
+	status DEFAULT 'ON'
+);
+
+CREATE TABLE sabores(
+	id_sabor INTEGER PRIMARY KEY AUTOINCREMENT,
+	sabor VARCHAR[30],
+	preco DECIMAL
+);
+CREATE TABLE pedidos(
+	id_pedido INTEGER PRIMARY KEY AUTOINCREMENT,
+	nome_cliente VARCHAR[30]
+);

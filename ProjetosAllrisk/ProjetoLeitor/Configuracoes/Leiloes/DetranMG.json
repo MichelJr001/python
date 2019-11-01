@@ -1,0 +1,24 @@
+{
+	"expressoes": [
+		{"expressao": "Tabela de Veículos para o Leilão \\d+", "substituicao": ""},
+		{"expressao": "LOTE", "substituicao": ""},
+		{"expressao": "PÁTIO.*", "substituicao": ""},
+		{"expressao": "CONDIÇÃO", "substituicao": ""},
+		{"expressao": "CHASSI", "substituicao": ""},
+		{"expressao": "PLACA", "substituicao": ""},
+		{"expressao": "MARCA", "substituicao": ""},
+		{"expressao": "MOTOR", "substituicao": ""},
+		{"expressao": "COR", "substituicao": ""},
+		{"expressao": "ANO", "substituicao": ""},
+		{"expressao": "AVALIAÇÃO", "substituicao": ""},
+		{"expressao": "\\n", "substituicao": ""},
+		{"expressao": "R\\$ \\d+,\\d+ ", "substituicao": "\\n"},
+		{"expressao": "R\\$ \\d+\\.\\d+,\\d+ ", "substituicao": "\\n"},
+		{"expressao": "^\\s+", "substituicao": ""},
+		{"expressao": "(^\\d+) ", "substituicao": "\\$1,"},
+		{"expressao": "", "substituicao": ""},
+		{"expressao": "", "substituicao": ""},
+		{"expressao": "", "substituicao": ""},
+		{"expressao": "", "substituicao": ""}
+	]
+}
